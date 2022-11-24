@@ -1,0 +1,103 @@
+:root {
+  --morning-button-color: rgb(151, 185, 20);
+  --morning-button-color-hover: rgba(151, 185, 20, 0.65);
+  --morning-gradient: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.31) -50%,
+    rgb(223, 216, 251) 60%
+  );
+  --day-night-button-color: rgb(228, 245, 163);
+  --day-night-button-color-hover: rgba(228, 245, 163, 0.65);
+  --day-gradient: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.31) -50%,
+    rgb(180, 163, 245) 100%
+  );
+  --night-gradient: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.31) -60%,
+    rgb(27, 10, 91) 45%
+  );
+}
+
+.WeatherDisplay {
+  margin: 0;
+  padding: 0;
+}
+
+.WeatherDisplay div.cityWeather {
+  display: inline-block;
+  text-align: left;
+}
+
+.WeatherDisplay .iconTemp {
+  display: flex;
+}
+
+.WeatherDisplay .sunIcon {
+  color: var(--day-night-button-color);
+  display: inline-block;
+  font-size: 3rem;
+  margin-right: 1rem;
+  padding: 0;
+}
+
+.WeatherDisplay h1 {
+  font-size: calc(3.7rem + 0.390625vw);
+  margin: 0;
+  padding: 0;
+}
+.WeatherDisplay .degree {
+  font-size: 1.61rem;
+  position: relative;
+  text-decoration: none;
+  top: -1.2rem;
+  vertical-align: baseline;
+}
+
+.WeatherDisplay ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.WeatherDisplay li.city {
+  display: inline-block;
+  font-size: calc(1.7rem + 0.390625vw);
+  font-weight: bold;
+  margin: 0;
+}
+
+.WeatherDisplay span.country {
+  display: inline-block;
+  font-size: calc(1.15rem + 0.390625vw);
+  margin-left: 0;
+}
+
+.WeatherDisplay li.currentWeather {
+  font-size: calc(1rem + 0.390625vw);
+  margin: 0;
+}
+
+.WeatherDisplay li .date {
+  font-size: calc(0.9rem + 0.390625vw);
+  margin: 0;
+}
+
+.WeatherDisplay .min-max-temp {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 6px;
+  color: #000;
+  display: block;
+  font-size: calc(0.6rem + 0.390625vw);
+  list-style-type: none;
+  margin: 0 auto;
+  min-height: min-content;
+  max-width: max-content;
+  text-align: center;
+  padding: 0.8em 1em;
+}
+.WeatherDisplay .max-temp {
+  font-weight: bold;
+}
