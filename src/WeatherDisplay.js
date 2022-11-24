@@ -18,11 +18,10 @@ export default function WeatherDisplay() {
   };
   return (
     <div className="WeatherDisplay">
-      <div className="d-flex row h-100 weather-all">
-        <div className="col-7 ms-sm-2 ms-md-2 ms-lg-2 ms-xl-2 ms-xxl-2 me-auto my-auto ps-3 sun-info">
+      <div className="d-flex row w-100 mt-3 mx-0 justify-content-between weather-all">
+        <div className="col-6 my-auto sun-info">
           <div className="cityWeather">
             <div className="iconTemp">
-              <span className="sunIcon">{defaultWeatherDisplay.sunIcon}</span>
               <h1>
                 {defaultWeatherDisplay.value}
                 <span className="degree">
@@ -40,38 +39,48 @@ export default function WeatherDisplay() {
                 {defaultWeatherDisplay.weather}
               </li>
               <li className="date">
-                Last updated:{" "}
-                <span className="date">{defaultWeatherDisplay.date}</span>
+                Last updated: <span>{defaultWeatherDisplay.date}</span>
               </li>
             </ul>
           </div>
         </div>
-        <div className="col-5 mt-4 my-sm-auto ms-sm-2 mx-xxl-auto text-center weather-info">
-          <ul className="min-max-temp">
-            <li>
+        <div className="col-6 text-end my-auto">
+          <span className="sunIcon">{defaultWeatherDisplay.sunIcon}</span>
+        </div>
+      </div>
+      <div className="container mt-4 weather-info">
+        <div className="d-flex row w-100 py-2 text-center justify-content-between min-max-temp">
+          <div className="col-3 ">
+            <p>
+              Min:
               <span className="min-temp">13</span>
-              °C /
-            </li>
-            <li>
-              <span className="max-temp">18</span>
               °C
-            </li>
-            <hr />
-            <li>Precipitation:</li>
-            <li>
+              <br />
+              Max: <span className="max-temp">18</span>
+              °C
+            </p>
+          </div>
+          <div className="col-3 border-start">
+            <p>
+              Precipitation:
+              <br />
               <span>0</span> mm
-            </li>
-            <hr />
-            <li>Wind:</li>
-            <li>
+            </p>
+          </div>
+          <div className="col-3 border-start">
+            <p>
+              Wind:
+              <br />
               <span>2</span> km/h
-            </li>
-            <hr />
-            <li>Humidity:</li>
-            <li>
+            </p>
+          </div>
+          <div className="col-3 border-start">
+            <p>
+              Humidity:
+              <br />
               <span>87</span> %
-            </li>
-          </ul>
+            </p>
+          </div>
         </div>
       </div>
     </div>

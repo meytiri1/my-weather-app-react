@@ -24,6 +24,10 @@
   margin: 0;
   padding: 0;
 }
+.WeatherDisplay p {
+  margin: 0;
+  padding: 0;
+}
 
 .WeatherDisplay div.cityWeather {
   display: inline-block;
@@ -36,19 +40,16 @@
 
 .WeatherDisplay .sunIcon {
   color: var(--day-night-button-color);
-  display: inline-block;
-  font-size: 3rem;
-  margin-right: 1rem;
-  padding: 0;
+  font-size: 7rem;
 }
 
 .WeatherDisplay h1 {
-  font-size: calc(3.7rem + 0.390625vw);
+  font-size: 3.6rem;
   margin: 0;
   padding: 0;
 }
 .WeatherDisplay .degree {
-  font-size: 1.61rem;
+  font-size: 1.6rem;
   position: relative;
   text-decoration: none;
   top: -1.2rem;
@@ -63,40 +64,31 @@
 
 .WeatherDisplay li.city {
   display: inline-block;
-  font-size: calc(1.7rem + 0.390625vw);
+  font-size: 1.5rem;
   font-weight: bold;
   margin: 0;
 }
 
 .WeatherDisplay span.country {
   display: inline-block;
-  font-size: calc(1.15rem + 0.390625vw);
+  font-size: 1rem;
   margin-left: 0;
 }
 
 .WeatherDisplay li.currentWeather {
-  font-size: calc(1rem + 0.390625vw);
+  font-size: 1rem;
   margin: 0;
 }
 
-.WeatherDisplay li .date {
-  font-size: calc(0.9rem + 0.390625vw);
+.WeatherDisplay li.date {
+  font-size: 0.8rem;
   margin: 0;
 }
 
 .WeatherDisplay .min-max-temp {
-  background: rgba(255, 255, 255, 0.8);
-  border: none;
-  border-radius: 6px;
   color: #000;
-  display: block;
-  font-size: calc(0.6rem + 0.390625vw);
-  list-style-type: none;
-  margin: 0 auto;
-  min-height: min-content;
-  max-width: max-content;
-  text-align: center;
-  padding: 0.8em 1em;
+  font-size: 0.7rem;
+  margin: 0;
 }
 .WeatherDisplay .max-temp {
   font-weight: bold;
