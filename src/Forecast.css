@@ -1,0 +1,20 @@
+.Forecast {
+  margin: 0;
+  padding: 0;
+}
+
+.Forecast div.forecast-container {
+  margin: 1.2rem 0;
+}
+.Forecast div.weather-info2 {
+  background: rgba(255, 255, 255, 1);
+  border: none;
+  border-radius: 3.75rem;
+  color: #000;
+  display: block;
+  font-size: calc(0.6rem + 0.390625vw);
+  padding: 0.8rem 0;
+}
+.Forecast .weather-forecast-temperature-max {
+  font-weight: bold;
+}
