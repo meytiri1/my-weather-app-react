@@ -7,7 +7,7 @@ export default function Search() {
     <div className="Search">
       <form className="city-search-form">
         <div className="d-flex">
-          <div className="col-6 me-sm-auto ms-md-2 ms-lg-2 me-auto me-sm-3 ms-xxl-2 me-xxl-5 mb-2">
+          <div className="col-6 mb-2">
             <div className="input-group rounded city-search">
               <input
                 type="search"
