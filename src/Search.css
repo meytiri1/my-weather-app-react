@@ -1,0 +1,55 @@
+:root {
+  --morning-button-color: rgb(151, 185, 20);
+  --morning-button-color-hover: rgba(151, 185, 20, 0.65);
+  --morning-gradient: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.31) -50%,
+    rgb(223, 216, 251) 60%
+  );
+  --day-night-button-color: rgb(228, 245, 163);
+  --day-night-button-color-hover: rgba(228, 245, 163, 0.65);
+  --day-gradient: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.31) -50%,
+    rgb(180, 163, 245) 100%
+  );
+  --night-gradient: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.31) -60%,
+    rgb(27, 10, 91) 45%
+  );
+}
+
+.Search .city-search-form {
+  display: block;
+  margin: 0;
+}
+.Search .form-control {
+  border-radius: 0.5em;
+}
+.Search .search-btn {
+  background: var(--day-night-button-color);
+  border: 2px solid var(--day-night-button-color);
+  border-radius: 0.5em;
+  transition: all 200ms ease-in-out;
+}
+.Search .search-btn:hover {
+  background: var(--day-night-button-color-hover);
+  border: 2px solid var(--day-night-button-color);
+  cursor: pointer;
+  opacity: 0.8;
+}
+.Search .location-btn {
+  background: var(--day-night-button-color);
+  border: 2px solid var(--day-night-button-color);
+  border-radius: 0.5em;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-size: 1.1rem;
+  line-height: 1.2rem;
+  transition: all 200ms ease-in-out;
+}
+.Search .location-btn:hover {
+  background: var(--day-night-button-color-hover);
+  border: 2px solid var(--day-night-button-color);
+  cursor: pointer;
+}
