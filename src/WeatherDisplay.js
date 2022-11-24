@@ -1,4 +1,5 @@
 import React from "react";
+import ReactAnimatedWeather from "react-animated-weather";
 
 import "./WeatherDisplay.css";
 
@@ -44,8 +45,13 @@ export default function WeatherDisplay() {
             </ul>
           </div>
         </div>
-        <div className="col-6 text-end my-auto">
-          <span className="sunIcon">{defaultWeatherDisplay.sunIcon}</span>
+        <div className="col-6 px-0 text-center my-auto">
+          <ReactAnimatedWeather
+            icon={`CLEAR_DAY`}
+            color={`#e4f5a3`}
+            size={125}
+            animate={true}
+          />
         </div>
       </div>
       <div className="container mt-4 weather-info">
