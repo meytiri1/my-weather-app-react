@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import Search from "./Search.js";
+import WeatherDisplay from "./WeatherDisplay.js";
+import Forecast from "./Forecast.js";
 
-function App() {
+import "./App.css";
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <div className="container container-all">
+        <Search />
+        <div className="container">
+          <WeatherDisplay />
+          <div className="row forecast-container mt-3 mx-auto">
+            <Forecast />
+          </div>
+          <div className="quote">
+            <p className="quote-of-day">
+              "Keep your eyes lifted high upon the sun, and you'll see the best
+              light in everyone."
+            </p>
+          </div>
+        </div>
+      </div>
+      <footer>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <a href="https://github.com/meytiri1/My-weather-app">
+            Open-source code
+          </a>{" "}
+          by Michelle Köhler, hosted via{" "}
+          <a href="https://app.netlify.com/sites/velvety-churros-c2666e/overview">
+            Netlify
+          </a>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </footer>
     </div>
   );
 }
-
-export default App;
