@@ -9,8 +9,8 @@ export default function WeatherDisplay() {
     value: 16,
     city: "Berlin",
     country: "DE",
-    weather: "Clear",
-    date: "Saturday, 21:21, October 29, 2022",
+    weather: "Clear sky",
+    date: "Saturday, 21:21",
     minTemp: 13,
     maxTemp: 18,
     precipitation: 0,
@@ -19,30 +19,28 @@ export default function WeatherDisplay() {
   };
   return (
     <div className="WeatherDisplay">
-      <div className="d-flex row w-100 mt-3 mx-0 justify-content-between weather-all">
-        <div className="col-6 my-auto sun-info">
+      <div className="d-flex row w-100 mt-2 m-0 justify-content-between weather-all">
+        <div className="col-6 my-auto p-0 sun-info">
           <div className="cityWeather">
-            <div className="iconTemp">
+            <div className="city">
               <h1>
+                {defaultWeatherDisplay.city},{" "}
+                <span className="country">{defaultWeatherDisplay.country}</span>
+              </h1>
+              <p className="mb-2 date">
+                Last updated: <span>{defaultWeatherDisplay.date}</span>
+                <br />
+                {defaultWeatherDisplay.weather}
+              </p>
+            </div>
+            <div>
+              <p className="iconTemp">
                 {defaultWeatherDisplay.value}
                 <span className="degree">
                   <sup>°C</sup>
                 </span>
-              </h1>
+              </p>
             </div>
-            <ul>
-              <li className="city">
-                {defaultWeatherDisplay.city},{" "}
-                <span className="country">{defaultWeatherDisplay.country}</span>
-              </li>
-
-              <li className="currentWeather">
-                {defaultWeatherDisplay.weather}
-              </li>
-              <li className="date">
-                Last updated: <span>{defaultWeatherDisplay.date}</span>
-              </li>
-            </ul>
           </div>
         </div>
         <div className="col-6 px-0 text-center my-auto">

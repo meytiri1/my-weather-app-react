@@ -7,7 +7,7 @@ import "./App.css";
 export default function App() {
   return (
     <div className="App">
-      <div className="container px-5 py-4 container-all">
+      <div className="container p-4 container-all">
         <Search />
         <div className="container">
           <WeatherDisplay />
