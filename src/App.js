@@ -24,13 +24,10 @@ export default function App() {
       </div>
       <footer>
         <p>
-          <a href="https://github.com/meytiri1/My-weather-app">
+          <a href="https://github.com/meytiri1/my-weather-app-react">
             Open-source code
           </a>{" "}
-          by Michelle Köhler, hosted via{" "}
-          <a href="https://app.netlify.com/sites/velvety-churros-c2666e/overview">
-            Netlify
-          </a>
+          by Michelle Köhler, hosted via Netlify
         </p>
       </footer>
     </div>
