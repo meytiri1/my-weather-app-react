@@ -1,22 +1,10 @@
 :root {
-  --morning-button-color: rgb(151, 185, 20);
-  --morning-button-color-hover: rgba(151, 185, 20, 0.65);
-  --morning-gradient: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 0.31) -50%,
-    rgb(223, 216, 251) 60%
-  );
-  --day-night-button-color: rgb(228, 245, 163);
-  --day-night-button-color-hover: rgba(228, 245, 163, 0.65);
-  --day-gradient: linear-gradient(
+  --button-color: rgb(228, 245, 163);
+  --button-color-hover: rgba(228, 245, 163, 0.65);
+  --gradient: linear-gradient(
     to top,
     rgba(255, 255, 255, 0.31) -50%,
     rgb(180, 163, 245) 100%
-  );
-  --night-gradient: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 0.31) -60%,
-    rgb(27, 10, 91) 45%
   );
 }
 
@@ -35,7 +23,7 @@
 }
 
 .WeatherDisplay .sunIcon {
-  color: var(--day-night-button-color);
+  color: var(--button-color);
   font-size: 6.8rem;
 }
 
