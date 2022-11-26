@@ -73,7 +73,7 @@ export default function WeatherDisplay() {
           </div>
           <div className="col-3 border-start">
             <p>
-              Wind:
+              Wind speed:
               <br />
               <span>2</span> km/h
             </p>
