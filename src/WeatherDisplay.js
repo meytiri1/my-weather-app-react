@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import ReactAnimatedWeather from "react-animated-weather";
+import FormattedDate from "./FormattedDate";
 
 import "./WeatherDisplay.css";
 
@@ -8,12 +9,11 @@ export default function WeatherDisplay() {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function displayWeather(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       temperature: response.data.temperature.current,
       description: response.data.condition.description,
-      date: `Saturday, 20:40`,
+      date: new Date(response.data.time * 1000),
       city: response.data.city,
       country: response.data.country,
       humidity: response.data.temperature.humidity,
@@ -35,7 +35,10 @@ export default function WeatherDisplay() {
                   <span className="country">{weatherData.country}</span>
                 </h1>
                 <p className="mb-2 date">
-                  Last updated: <span>{weatherData.date}</span>
+                  Last updated:{" "}
+                  <span>
+                    <FormattedDate date={weatherData.date} />
+                  </span>
                   <br />
                   <span className="text-capitalize">
                     {weatherData.description}

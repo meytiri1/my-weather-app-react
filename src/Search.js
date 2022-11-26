@@ -15,7 +15,6 @@ export default function Search() {
                 placeholder="Search city"
                 aria-label="Search"
                 aria-describedby="search-addon"
-                autocomplete="off"
               />
               <span className="input-group-text border-start-0 rounded-start search-btn">
                 <i className="fa-solid fa-magnifying-glass"></i>
@@ -27,7 +26,7 @@ export default function Search() {
               className="btn px-3 py-2 align-items-center location-btn"
               type="button"
             >
-              <i class="fa-solid fa-location-dot"></i>
+              <i className="fa-solid fa-location-dot"></i>
             </button>
           </div>
         </div>
