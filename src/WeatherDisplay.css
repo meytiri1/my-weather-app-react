@@ -44,11 +44,11 @@
   font-size: 3rem;
 }
 
-.WeatherDisplay .degree {
+.WeatherDisplay .unit {
   font-size: 1.4rem;
   position: relative;
   text-decoration: none;
-  top: 0.8rem;
+  top: -1rem;
   vertical-align: baseline;
 }
 

@@ -1,5 +1,4 @@
 import Search from "./Search.js";
-import WeatherDisplay from "./WeatherDisplay.js";
 import Forecast from "./Forecast.js";
 
 import "./App.css";
