@@ -8,7 +8,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container p-4 container-all">
-        <Search />
+        <Search defaultCity="Berlin" />
         <div className="container">
           <WeatherDisplay />
           <div className="row forecast-container mt-3 mx-auto">
