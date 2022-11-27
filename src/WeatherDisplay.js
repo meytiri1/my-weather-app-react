@@ -1,25 +1,20 @@
 import React from "react";
-import ReactAnimatedWeather from "react-animated-weather";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 
 import "./WeatherDisplay.css";
-import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherDisplay(props) {
-  console.log(props.data);
+  console.log(props.data.icon);
   return (
     <div className="WeatherDisplay">
       <div className="d-flex row w-100 mt-2 m-0 justify-content-between weather-all">
         <div className="col-6 my-auto p-0 sun-info">
           <div className="cityWeather">
             <div className="city">
-              <h1>
-                {props.data.city},{" "}
-                <span className="country">{props.data.country}</span>
-              </h1>
+              <h1>{props.data.city}</h1>
               <p className="mb-2 date">
-                Last updated:{" "}
+                <span>{props.data.country}</span>,{" "}
                 <span>
                   <FormattedDate date={props.data.date} />
                 </span>
@@ -29,24 +24,13 @@ export default function WeatherDisplay(props) {
                 </span>
               </p>
             </div>
-            <div>
-              <p className="iconTemp">
-                {Math.round(props.data.temperature)}
-                <span className="degree">
-                  <sup>°C</sup>
-                </span>
-              </p>
+            <div className="iconTemp">
+              <WeatherUnits celsius={props.data.temperature} />
             </div>
           </div>
         </div>
         <div className="col-6 px-0 text-center my-auto">
           <WeatherIcon code={props.data.icon} />
-          <ReactAnimatedWeather
-            icon={`CLEAR_DAY`}
-            color={`#e4f5a3`}
-            size={125}
-            animate={true}
-          />
         </div>
       </div>
       <div className="container mt-4 weather-info">
