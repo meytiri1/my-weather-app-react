@@ -9,6 +9,7 @@ export default function Search(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function displayWeather(response) {
+    console.log(response.data.city);
     setWeatherData({
       ready: true,
       temperature: response.data.temperature.current,
@@ -22,6 +23,8 @@ export default function Search(props) {
       wind: response.data.wind.speed,
     });
   }
+
+  console.log(weatherData.description);
 
   function search() {
     let apiKey = `3t89a3048deco3ffc8f06ed499bd33b4`;

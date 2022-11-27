@@ -10,7 +10,6 @@ export default function App() {
       <div className="container p-4 container-all">
         <Search defaultCity="Berlin" />
         <div className="container">
-          <WeatherDisplay />
           <div className="row forecast-container mt-3 mx-auto">
             <Forecast />
           </div>

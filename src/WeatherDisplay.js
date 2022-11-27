@@ -1,11 +1,13 @@
 import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
 
 import "./WeatherDisplay.css";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherDisplay(props) {
-  console.log(props);
+  console.log(props.data);
   return (
     <div className="WeatherDisplay">
       <div className="d-flex row w-100 mt-2 m-0 justify-content-between weather-all">
@@ -38,6 +40,7 @@ export default function WeatherDisplay(props) {
           </div>
         </div>
         <div className="col-6 px-0 text-center my-auto">
+          <WeatherIcon code={props.data.icon} />
           <ReactAnimatedWeather
             icon={`CLEAR_DAY`}
             color={`#e4f5a3`}
