@@ -10,7 +10,7 @@ export default function WeatherDisplay(props) {
   return (
     <div className="WeatherDisplay">
       <div className="d-flex row w-100 mt-2 m-0 justify-content-between weather-all">
-        <div className="col-6 my-auto p-0 sun-info">
+        <div className="col-7 my-auto p-0 sun-info">
           <div className="cityWeather">
             <div className="city">
               <h1>{props.data.city}</h1>
@@ -30,7 +30,7 @@ export default function WeatherDisplay(props) {
             </div>
           </div>
         </div>
-        <div className="col-6 px-0 text-center my-auto">
+        <div className="col-5 px-0 text-center my-auto">
           <WeatherIcon code={props.data.icon} />
         </div>
       </div>
