@@ -1,5 +1,4 @@
 import Search from "./Search.js";
-import Forecast from "./Forecast.js";
 
 import "./App.css";
 
@@ -9,9 +8,6 @@ export default function App() {
       <div className="container p-4 container-all">
         <Search defaultCity="Berlin" />
         <div className="container">
-          <div className="forecast-container mt-3 mx-auto">
-            <Forecast />
-          </div>
           <div className="quote">
             <p className="quote-of-day">
               "Keep your eyes lifted high upon the sun, and you'll see the best

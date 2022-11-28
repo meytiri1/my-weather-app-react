@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import WeatherDisplay from "./WeatherDisplay";
+import Forecast from "./Forecast.js";
 
 import "./Search.css";
 
@@ -9,7 +10,7 @@ export default function Search(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function displayWeather(response) {
-    console.log(response.data);
+    console.log(response.data.coordinates);
     setWeatherData({
       ready: true,
       temperature: response.data.temperature.current,
@@ -22,6 +23,7 @@ export default function Search(props) {
       maxTemp: 18,
       wind: response.data.wind.speed,
       icon: response.data.condition.icon,
+      coordinates: response.data.coordinates,
     });
   }
 
@@ -71,6 +73,9 @@ export default function Search(props) {
           </div>
         </form>
         <WeatherDisplay data={weatherData} />
+        <div className="forecast-container mt-3 mx-auto">
+          <Forecast coordinates={weatherData.coordinates} />
+        </div>
       </div>
     );
   } else {

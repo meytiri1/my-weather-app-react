@@ -6,7 +6,6 @@ import WeatherUnits from "./WeatherUnits";
 import "./WeatherDisplay.css";
 
 export default function WeatherDisplay(props) {
-  console.log(props.data.icon);
   return (
     <div className="WeatherDisplay">
       <div className="d-flex row w-100 mt-2 m-0 justify-content-between weather-all">
