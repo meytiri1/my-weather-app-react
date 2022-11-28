@@ -31,7 +31,7 @@ export default function WeatherDisplay(props) {
           </div>
         </div>
         <div className="col-5 px-0 text-center my-auto">
-          <WeatherIcon code={props.data.icon} />
+          <WeatherIcon code={props.data.icon} size={125} color={`#e4f5a3`} />
         </div>
       </div>
       <div className="container mt-4 weather-info">

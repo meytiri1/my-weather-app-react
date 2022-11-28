@@ -3,18 +3,22 @@
   padding: 0;
 }
 
-.Forecast div.forecast-container {
-  margin: 1.2rem 0;
-}
-.Forecast div.weather-info2 {
-  background: rgba(255, 255, 255, 1);
+.Forecast {
+  background: rgba(255, 255, 255, 0.3);
   border: none;
-  border-radius: 3.75rem;
+  border-radius: 0.5em;
   color: #000;
   display: block;
-  font-size: calc(0.6rem + 0.390625vw);
+  font-size: 0.6rem;
+  margin: 1.2rem 0;
   padding: 0.8rem 0;
 }
-.Forecast .weather-forecast-temperature-max {
+
+.Forecast .forecast-day {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.Forecast .forecast-temp-max {
   font-weight: bold;
 }

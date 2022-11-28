@@ -9,7 +9,7 @@ export default function App() {
       <div className="container p-4 container-all">
         <Search defaultCity="Berlin" />
         <div className="container">
-          <div className="row forecast-container mt-3 mx-auto">
+          <div className="forecast-container mt-3 mx-auto">
             <Forecast />
           </div>
           <div className="quote">
