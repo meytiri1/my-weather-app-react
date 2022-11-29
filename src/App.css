@@ -8,7 +8,6 @@
   );
 }
 
-/*DEFAULT Bootstrap X-Small devices (portrait phones, less than 576px)*/
 .App .container.container-all {
   background: var(--gradient);
   border: none;
@@ -43,4 +42,8 @@
 }
 .quote .quote-of-day {
   margin: 0.4em auto 0 auto;
+}
+
+.App a {
+  text-decoration: none;
 }
