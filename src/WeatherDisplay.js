@@ -13,7 +13,8 @@ export default function WeatherDisplay(props) {
             <div className="city">
               <h1>{props.data.city}</h1>
               <p className="mb-2 date">
-                <span>{props.data.country}</span>,{" "}
+                <span>{props.data.country}</span>
+                <br />
                 <span>
                   <FormattedDate date={props.data.date} />
                 </span>

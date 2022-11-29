@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function Quote(props) {
-  console.log(props);
   const codeMapping = {
     "clear-sky-day": `"Keep your eyes lifted high upon the sun, and you'll see the best light in
       everyone. - Tess Guinery"`,
