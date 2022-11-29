@@ -1,7 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
-import WeatherUnits from "./WeatherUnits";
 
 import "./WeatherDisplay.css";
 
@@ -25,7 +24,10 @@ export default function WeatherDisplay(props) {
               </p>
             </div>
             <div className="iconTemp">
-              <WeatherUnits celsius={props.data.temperature} />
+              <span>{Math.round(props.data.temperature)}</span>
+              <span className="unit">
+                <sup>°C</sup>
+              </span>
             </div>
           </div>
         </div>
@@ -33,27 +35,13 @@ export default function WeatherDisplay(props) {
           <WeatherIcon code={props.data.icon} size={125} color={`#e4f5a3`} />
         </div>
       </div>
-      <div className="container mt-4 weather-info">
+      <div className="container mt-2 weather-info">
         <div className="d-flex row w-100 py-2 text-center justify-content-between min-max-temp">
           <div className="col-3">
             <p>
-              Min. temperature:
+              Feels like:
               <br />
-              <span>{props.data.minTemp}</span>°C
-            </p>
-          </div>
-          <div className="col-3 border-start">
-            <p>
-              Max. temperature:
-              <br />
-              <span>{props.data.maxTemp}</span>°C
-            </p>
-          </div>
-          <div className="col-3 border-start">
-            <p>
-              Wind speed:
-              <br />
-              <span>{Math.round(props.data.wind)}</span> km/h
+              <span>{Math.round(props.data.feelsLike)}</span>°C
             </p>
           </div>
           <div className="col-3 border-start">
@@ -61,6 +49,20 @@ export default function WeatherDisplay(props) {
               Humidity:
               <br />
               <span>{props.data.humidity}</span> %
+            </p>
+          </div>
+          <div className="col-3 border-start">
+            <p>
+              Pressure:
+              <br />
+              <span>{props.data.pressure}</span> hPa
+            </p>
+          </div>
+          <div className="col-3 border-start">
+            <p>
+              Wind speed:
+              <br />
+              <span>{Math.round(props.data.wind)}</span> km/h
             </p>
           </div>
         </div>
