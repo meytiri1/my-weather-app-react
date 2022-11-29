@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import WeatherDisplay from "./WeatherDisplay";
 import Forecast from "./Forecast.js";
+import Quote from "./Quote";
 
 import "./Search.css";
 
@@ -10,7 +11,7 @@ export default function Search(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function displayWeather(response) {
-    console.log(response.data.coordinates);
+    console.log(response.data);
     setWeatherData({
       ready: true,
       temperature: response.data.temperature.current,
@@ -19,8 +20,8 @@ export default function Search(props) {
       city: response.data.city,
       country: response.data.country,
       humidity: response.data.temperature.humidity,
-      minTemp: 13,
-      maxTemp: 18,
+      feelsLike: response.data.temperature.feels_like,
+      pressure: response.data.temperature.pressure,
       wind: response.data.wind.speed,
       icon: response.data.condition.icon,
       coordinates: response.data.coordinates,
@@ -75,6 +76,9 @@ export default function Search(props) {
         <WeatherDisplay data={weatherData} />
         <div className="forecast-container mt-3 mx-auto">
           <Forecast coordinates={weatherData.coordinates} />
+        </div>
+        <div className="quote">
+          <Quote weather={weatherData.icon} />
         </div>
       </div>
     );
